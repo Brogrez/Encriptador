@@ -1,0 +1,116 @@
+body{
+    background-color: #F3F5FC;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;   
+}
+.contenedor {
+    max-width: 120rem;
+    max-height: 120rem;
+    margin: 0 auto; /*margen*/
+}
+
+.error {
+    position:absolute;
+    text-align: center;
+    padding: 1rem;
+    color: red;
+    text-transform: uppercase;
+    top: 10rem;
+    left: 0%;
+    font-size: 2rem;
+}
+
+.posicion{
+    position: relative;
+   
+}
+.formulario{
+    position:absolute;
+    margin-top: 2rem;
+    width: 50%;
+    height: 25%;
+    left: 25rem;
+    top: 25rem;
+}
+.textArea{
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    margin-left: 3%;
+    background-color: transparent;
+    border: none;
+}
+input::placeholder{
+    color: #0A3871;
+}
+.botones{
+  margin-top: 50%;
+  
+}
+
+.btn_tamaño{
+    margin-right: 4rem;
+    width: 20rem;
+    height: 67px;
+    left: 0px;
+    top: 0px;
+    border-radius: 24px;
+}
+
+.btn_color1{
+    background: #0A3871;
+    color: #FFFFFF;
+}
+.btn_color2{
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    color: #0A3871;
+}
+.letras{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+}
+
+.logo{
+    position: absolute;
+    align-items: start;
+    margin: 4rem;
+}
+
+.rectangulo{
+    display:flex;
+    align-items: center;    
+    width: 35rem;
+    height: 80rem;
+    background-color: #ffffff;
+    position: absolute;
+    margin-left: 75%;
+    top: 4rem;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+.vertical{
+ margin-top: -10rem;
+ margin-left: 1rem;  
+}
+.p1{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+/* or 29px */
+    text-align: center;
+}
+.p2{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    text-align: center;
+}
