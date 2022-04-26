@@ -12,16 +12,21 @@ const encriptado = {
 
 let boton1 = document.querySelector("#btn1")
 let boton2 = document.querySelector("#btn2")
+const formulario = document.querySelector("#formulario")
 // let textArea = document.querySelector('#textArea')
 let texto = ""
 
 function rescatar() {
    texto = document.querySelector('#textArea').value
    console.log(texto)
+    if(texto === ''){
+        mostrarAlerta('Oops! Creo que el campo esta vacio!!');
+    }
 }
 
 function textoEncriptado() {
     rescatar();
+    texto = cleanStrings(texto)
     let subtexto = texto.split('');
     console.log(subtexto)
     for(i = 0; i < subtexto.length; i++){
@@ -38,9 +43,29 @@ function textoEncriptado() {
 
 function desencript(){
     rescatar();
+    texto = cleanStrings(texto)
     texto = texto.replaceAll("ai","a").replaceAll("enter","e").replaceAll("imes","i").replaceAll("ober","o").replaceAll("ufat","u");
     console.log(texto)
 }
+
+function cleanStrings (str){
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase(); 
+}
+
+function mostrarAlerta(mensaje) {
+    const alerta = document.createElement('P');
+    alerta.textContent = mensaje;
+    alerta.classList.add('error');
+
+    formulario.appendChild(alerta);
+
+     //? desaparezca despues de 1 segundo
+    setTimeout(() => {
+        alerta.remove()
+        }, 1600);
+
+}
+
 
 boton2.onclick = desencript;
 boton1.onclick = textoEncriptado;
